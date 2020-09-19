@@ -8,25 +8,29 @@ import android.widget.AdapterView;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
-    TextView lifecycle_tv;
+    TextView activityTitle, onCreateTextView, onStartTextView;
     private int i=0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        lifecycle_tv = (TextView) findViewById(R.id.activityTitle);
-        lifecycle_tv.setTextSize(24);
-        lifecycle_tv.setText("Main Activity:");
+        activityTitle = (TextView) findViewById(R.id.activityTitle);
+        activityTitle.setTextSize(24);
+        activityTitle.setText("Main Activity:");
 
-        lifecycle_tv.setText(lifecycle_tv.getText() + "\nOnCreate executed");
+        onCreateTextView = (TextView) findViewById(R.id.onCreateTextView);
+        onCreateTextView.setTextSize(24);
+        onCreateTextView.setText("onCreate executed");
+
     }
 
 
     @Override
     protected void onStart() {
         super.onStart();
-        if(i++ < 1){
-            lifecycle_tv.setText(lifecycle_tv.getText() + "\nOnStart executed");
-        }
+        onStartTextView = (TextView) findViewById(R.id.onStartTextView);
+        onStartTextView.setTextSize(24);
+        onStartTextView.setText(""); // reset when it starts
+        onStartTextView.setText("onStart executed");
     }
 }
