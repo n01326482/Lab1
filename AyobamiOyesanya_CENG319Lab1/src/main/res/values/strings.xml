@@ -2,6 +2,7 @@
     <string name="app_name">Lab Assignment 1</string>
     <string name="lifecycle_title"></string>
     <string name="main_activity_title">Life Cycle Methods Demonstration</string>
-    <string name="on_create_string"></string>
-    <string name="on_start_string"></string>
+    <string name="on_create_string">executed</string>
+    <string name="on_start_string">executed</string>
+    <string name="on_create_view_toast">fragment onCreateView executed</string>
 </resources>

@@ -15,7 +15,7 @@ public class LifeCycleFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        Toast.makeText(getContext(), "Lifecycle fragment onCreateView executed", Toast.LENGTH_SHORT).show();
+        Toast.makeText(getContext(), "LifeCycle "+getString(R.string.on_create_view_toast), Toast.LENGTH_SHORT).show();
         View view = inflater.inflate(R.layout.lifecycle_fragment, container, false);
 
         return view;

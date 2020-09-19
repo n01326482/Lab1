@@ -19,7 +19,7 @@ public class AIActivity extends AppCompatActivity {
 
         onCreateTextView = (TextView) findViewById(R.id.onCreateTextView);
         onCreateTextView.setTextSize(24);
-        onCreateTextView.setText("onCreate executed");
+        onCreateTextView.setText("onCreate "+getString(R.string.on_create_string));
     }
 
     @Override
@@ -28,6 +28,6 @@ public class AIActivity extends AppCompatActivity {
         onStartTextView = (TextView) findViewById(R.id.onStartTextView);
         onStartTextView.setTextSize(24);
         onStartTextView.setText(""); // reset when it starts
-        onStartTextView.setText("onStart executed");
+        onStartTextView.setText("onStart "+getString(R.string.on_start_string));
     }
 }

@@ -19,7 +19,7 @@ public class ListViewFragment extends Fragment implements AdapterView.OnItemClic
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        Toast.makeText(getContext(), "Listview fragment onCreateView executed", Toast.LENGTH_SHORT).show();
+        Toast.makeText(getContext(), "ListView "+getString(R.string.on_create_view_toast), Toast.LENGTH_SHORT).show();
         View view = inflater.inflate(R.layout.listview_fragment, container, false);
         listView = (ListView) view.findViewById(R.id.listView);
         String[] subActivities = new String[]{"AIActivity", "VRActivity"};
